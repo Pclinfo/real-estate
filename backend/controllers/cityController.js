@@ -30,6 +30,7 @@ const getCities = async (req, res) => {
 
     res.json(cities);
   } catch (error) {
+    console.log("PAI error")
     console.error('API error:', error.response?.data || error.message);
     res.status(error.response?.status || 500).json({ error: 'Server error' });
   }

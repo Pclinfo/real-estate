@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const messageApi = createApi({
   reducerPath: 'messageApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:8000/api/messages', // ✅ your base
+    baseUrl: import.meta.env.VITE_API_BASE_URL||'http://localhost:8000/api/', // ✅ your base
     prepareHeaders: (headers, { getState }) => {
       const token = localStorage.getItem('token');
       if (token) headers.set('Authorization', `Bearer ${token}`);

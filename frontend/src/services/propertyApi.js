@@ -5,7 +5,7 @@ export const propertyApi = createApi({
   reducerPath: 'propertyApi',
   baseQuery: fetchBaseQuery({
     // baseUrl: 'http://localhost:8000/api',
-    baseUrl:import.meta.env.VITE_API_BASE_URL_PROPERTIES||'http://localhost:8000/api',
+    baseUrl:import.meta.env.VITE_API_BASE_URL ||'http://localhost:8000/api',
     prepareHeaders: (headers, { getState }) => {
   const state = getState();
   const token = state.user.token // safe access

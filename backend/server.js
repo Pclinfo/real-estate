@@ -83,7 +83,7 @@ app.use('/uploads/profiles', express.static(path.join(__dirname, 'uploads/profil
 app.use('/uploads/messages', express.static(path.join(__dirname, 'uploads/messages')));
 
 // API Routes
-app.use('/api/auth', authRoutes);
+app.use('/api', authRoutes);
 app.use('/api/properties', propertyRoutes);
 app.use("/api/appointments", appointmentRoutes);
 app.use('/api/auth', profileRoutes);

@@ -11,9 +11,11 @@ const pool = new Pool({
   password: process.env.PG_PASSWORD,
   database: process.env.PG_DATABASE,
 });
+
 // Test DB connection
 pool.query('SELECT NOW()', (err, res) => {
   if (err) {
+    console.log(err.message)
     console.error('❌ Database connection failed:', err.message);
   } else {
     console.log('✅ Database connected at:', res.rows[0].now);
