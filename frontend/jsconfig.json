@@ -3,8 +3,13 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "skipLibCheck": true,
+    "allowJs": true,             // ✅ Enable JavaScript support
+    "checkJs": false,            // ✅ Prevent TS checking JS files
+    "noEmit": true,              // ✅ Don't output anything
+    "types": [],                 // ✅ Prevent loading any `@types/*`
     "paths": {
       "@/*": ["./src/*"]
     }
-  }
+  },
+  "exclude": ["node_modules"]
 }
